@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ISP": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

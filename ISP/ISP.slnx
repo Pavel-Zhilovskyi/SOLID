@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="ISP/ISP.csproj" />
+  <Project Path="ISPGood/ISPGood.csproj" Id="28ed20d8-a321-49c4-bb5a-2e15e0427063" />
+</Solution>
