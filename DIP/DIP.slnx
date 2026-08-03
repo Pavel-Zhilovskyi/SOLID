@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="DIP/DIP.csproj" />
+  <Project Path="DIPGood/DIPGood.csproj" />
+</Solution>

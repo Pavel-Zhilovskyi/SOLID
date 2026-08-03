@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "DIPBad": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

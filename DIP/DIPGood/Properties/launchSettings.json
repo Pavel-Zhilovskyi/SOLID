@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "DIPGood": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

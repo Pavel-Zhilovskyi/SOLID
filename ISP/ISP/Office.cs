@@ -1,6 +1,4 @@
-﻿using ISPBad;
-
-namespace ISPBad;
+﻿namespace ISPBad;
 
 internal class Office
 {
