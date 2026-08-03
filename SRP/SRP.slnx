@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="SRP/SRPBad.csproj" />
+  <Project Path="SRPGood/SRPGood.csproj" />
+</Solution>

@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "SRPBad": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
