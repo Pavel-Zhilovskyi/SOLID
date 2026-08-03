@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "LSPBad": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

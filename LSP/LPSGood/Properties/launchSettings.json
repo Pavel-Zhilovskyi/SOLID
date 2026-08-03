@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "LPSGood": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

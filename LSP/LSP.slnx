@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="LPSGood/LSPGood.csproj" />
+  <Project Path="LSP/LSP.csproj" />
+</Solution>
