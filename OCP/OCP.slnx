@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="OCP/OCPBad.csproj" />
+  <Project Path="OCPGood/OCPGood.csproj" />
+</Solution>
