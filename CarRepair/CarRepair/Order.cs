@@ -2,7 +2,7 @@
 
 internal class Order
 {
-    public int Number { get; }
+    public int Number { get; private set; }
     private readonly Transport _transport;
 
     private readonly IReadOnlyCollection<Service> _services;
