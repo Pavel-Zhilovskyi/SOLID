@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="BadVersion/BadVersion.csproj" Id="2c0a9a70-987c-4a48-8a7e-de5a22ea99a4" />
+  <Project Path="CarRepair/CarRepair.csproj" />
+</Solution>
