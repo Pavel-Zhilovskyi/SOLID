@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "BadSRPVersion": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
