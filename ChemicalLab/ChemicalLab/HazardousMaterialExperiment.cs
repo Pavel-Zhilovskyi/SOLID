@@ -2,12 +2,12 @@
 
 internal class HazardousMaterialExperiment : Experiment
 {
-    private readonly ITemperatureAnalyzer _temperatureAnalyzer;
+    private readonly IChemicalAnalyzer _chemicalAnalyzer;
     private readonly IRadiationAnalyzer _radiationAnalyzer;
 
-    public HazardousMaterialExperiment(Sample sample, ITemperatureAnalyzer analyzer, IRadiationAnalyzer radiationAnalyzer  ) : base(sample)
+    public HazardousMaterialExperiment(Sample sample, IChemicalAnalyzer analyzer, IRadiationAnalyzer radiationAnalyzer  ) : base(sample)
     {
-        _temperatureAnalyzer = analyzer;
+        _chemicalAnalyzer = analyzer;
         _radiationAnalyzer = radiationAnalyzer;
     }
 
@@ -16,6 +16,6 @@ internal class HazardousMaterialExperiment : Experiment
         Console.WriteLine("Performing danger experiment if we can keep the sample without protection...");
 
         return _radiationAnalyzer.Analyze(Sample)
-       && _temperatureAnalyzer.Analyze(Sample);
+       && _chemicalAnalyzer.Analyze(Sample);
     }
 }
