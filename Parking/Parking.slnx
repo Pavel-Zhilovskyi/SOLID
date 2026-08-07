@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Parking/ParkingBad.csproj" />
+  <Project Path="ParkingGood/ParkingGood.csproj" />
+</Solution>
