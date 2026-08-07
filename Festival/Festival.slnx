@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Festival/FestivalBad.csproj" />
+  <Project Path="FestivalGood/FestivalGood.csproj" />
+</Solution>

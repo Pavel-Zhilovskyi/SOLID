@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "FestivalGood": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
