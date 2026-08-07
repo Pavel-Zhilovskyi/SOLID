@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "CinemaGood": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
