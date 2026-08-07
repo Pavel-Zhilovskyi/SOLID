@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "CarWashGood": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
