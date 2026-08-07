@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="InvitationChecker/InvitationChecker.csproj" />
+  <Project Path="InvitationCheckerGood/InvitationCheckerGood.csproj" />
+</Solution>

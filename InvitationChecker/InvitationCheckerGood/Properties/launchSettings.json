@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "InvitationCheckerGood": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

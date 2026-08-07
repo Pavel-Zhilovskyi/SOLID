@@ -1,6 +1,4 @@
-﻿using System.Diagnostics.Metrics;
-
-namespace DeliverySystem;
+﻿namespace DeliverySystem;
 
 internal class CourierDelivery : DeliverySevice
 {

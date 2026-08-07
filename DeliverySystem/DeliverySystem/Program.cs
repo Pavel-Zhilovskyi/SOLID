@@ -17,7 +17,7 @@ internal class Program
             new ExpressDelivery(),
             new PostDelivery()
         };
-
+ 
         foreach (var order in orders)
         {
             Console.WriteLine($"=== {order} ===");
