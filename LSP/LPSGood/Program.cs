@@ -4,32 +4,29 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        var folder = new FolderBackupSource();
-        var usb = new UsbBackupSource();
-        var repo = new RemoteRepositorySource();
-
         var sources = new List<BackupSource>
         {
-            folder,
-            usb,
-            repo
-        };
-
-        var deletableSources = new List<IDeletableSource>
-        {
-            folder,
-            repo
+            new BackupSource(),
+            new FolderBackupSource(),
+            new UsbBackupSource(),
+            new RemoteRepositorySource()
         };
 
         foreach (var source in sources)
         {
-            source.ReadFiles();
-            Console.WriteLine($"Size: {source.GetSize()}");
+            ProcessBackup(source);
         }
+    }
 
-        foreach(var deletableSource in deletableSources)
-        {
-            deletableSource.DeleteSource();
-        }
+    static void ProcessBackup(BackupSource source)
+    {
+        source.ReadFiles();
+
+        Console.WriteLine($"Size: {source.GetSize()}");
+
+        BackupFile backup = source.GetBackup();
+
+        Console.WriteLine($"Backup: {backup.Name}");
+        Console.WriteLine();
     }
 }

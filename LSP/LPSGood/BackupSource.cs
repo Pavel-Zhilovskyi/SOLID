@@ -1,7 +1,20 @@
 ﻿namespace LSPGood;
 
-internal abstract class BackupSource
+internal class BackupSource
 {
-    public abstract void ReadFiles();
-    public abstract int GetSize();
+    public virtual void ReadFiles()
+    {
+        Console.WriteLine("Получение файлов из источника.");
+    }
+
+    public virtual int GetSize()
+    {
+        Console.WriteLine("Расчет размера источника.");
+        return 0;
+    }
+
+    public virtual BackupFile GetBackup()
+    {
+        return new BackupFile("Обычная резервная копия");
+    }
 }
