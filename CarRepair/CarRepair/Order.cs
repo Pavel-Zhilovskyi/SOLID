@@ -3,47 +3,31 @@
 internal class Order
 {
     public int Number { get; private set; }
-    private readonly Transport _transport;
-
-    private readonly IReadOnlyCollection<Service> _services;
+    public Transport Transport { get; private set; }
+    public IReadOnlyCollection<Service> Services { get; private set; }
 
     public Order(int number, Transport transport, IReadOnlyCollection<Service> services)
     {
         Number = number;
-        _transport = transport;
-        _services = services;
+        Transport = transport;
+        Services = services;
     }
 
     public decimal CountPrice()
     {
-        decimal totalPrice = 0;
-        
-        foreach (var service in _services)
-        {
-            totalPrice += service.Price;
-        }
-
-        return totalPrice;
+        var calculator = new OrderPriceCalculator(Services);
+        return calculator.CalculateTotal();
     }
 
     public TimeSpan CountHoursToComplete()
     {
-        TimeSpan totalHours = TimeSpan.Zero;
-        
-        foreach (var service in _services)
-        {
-            totalHours += service.HoursToComplete;
-        }
-     
-        return totalHours;
+        var calculator = new OrderTimeCalculator(Services);
+        return calculator.CalculateTotal();
     }
 
     public void CompleteOrder()
     {
-        foreach (var service in _services)
-        {
-            service.Repair(_transport);
-            Console.WriteLine($"Стоимость: {service.Price} грн.");
-        }
+        var executor = new OrderExecutor(Transport, Services);
+        executor.Execute();
     }
 }

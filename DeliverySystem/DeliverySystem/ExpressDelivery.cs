@@ -1,6 +1,6 @@
 ﻿namespace DeliverySystem;
 
-internal class ExpressDelivery : DeliverySevice
+internal class ExpressDelivery : PostDelivery
 {
     public override decimal CalculateCost(Order order)
     {

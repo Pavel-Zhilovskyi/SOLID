@@ -16,7 +16,7 @@ internal class Program
         thermostat.TurnOn();
         camera.TurnOn();
 
-        controller.ShowStatuses(new IStatusProvider[]
+        controller.ShowStatuses(new List<IStatusProvider>
         {
             light,
             thermostat,
@@ -27,7 +27,7 @@ internal class Program
 
         Console.WriteLine();
 
-        controller.RunDiagnostics(new ISelfTestable[]
+        controller.RunDiagnostics(new List<ISelfTestable>
         {
             thermostat,
             camera
@@ -35,7 +35,7 @@ internal class Program
 
         Console.WriteLine();
 
-        controller.UpdateSoftware(new ISoftwareUpdatable[]
+        controller.UpdateSoftware(new List<ISoftwareUpdatable>
         {
             camera,
             door
@@ -43,7 +43,7 @@ internal class Program
 
         Console.WriteLine();
 
-        controller.SendAlert(new INotificationSender[]
+        controller.SendAlert(new List<INotificationSender>
         {
             camera,
             door

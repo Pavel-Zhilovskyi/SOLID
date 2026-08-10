@@ -53,7 +53,7 @@ public class MovieSession
         Console.WriteLine();
     }
 
-    public decimal CalculateRevenue()
+    public decimal CalculateIncome()
     {
         return soldTickets.Count * TicketPrice;
     }
@@ -64,7 +64,7 @@ public class MovieSession
 
         Console.WriteLine($"Фильм: {Title}");
         Console.WriteLine($"Продано билетов: {soldTickets.Count}");
-        Console.WriteLine($"Выручка: {CalculateRevenue()} грн");
+        Console.WriteLine($"Выручка: {CalculateIncome()} грн");
 
         Console.WriteLine("Отчет успешно сохранен.");
     }

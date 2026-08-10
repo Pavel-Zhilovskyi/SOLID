@@ -1,20 +1,20 @@
 ﻿namespace DeliverySystem;
 
-internal class PostDelivery : DeliverySevice
+internal class PostDelivery
 {
-    public override decimal CalculateCost(Order order)
+    public virtual decimal CalculateCost(Order order)
     {
         return (int)order.Distance * order.ItemsCost * (int)order.Weight / 100000;
     }
 
-    public override int CalculateDays(Order order)
+    public virtual int CalculateDays(Order order)
     {
         if (order.Distance <= 10) return 2;
         if (order.Distance <= 50) return 3;
         return 5;
     }
 
-    public override Receipt Deliver(Order order)
+    public virtual Receipt Deliver(Order order)
     {
         string trackingNumber = Random.Shared.Next(1, 1000).ToString();
         decimal cost = CalculateCost(order);

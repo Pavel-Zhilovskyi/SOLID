@@ -2,7 +2,7 @@
 
 internal class OrderProcessor
 {
-    public static void ProcessAndPrint(DeliverySevice service, Order order)
+    public static void ProcessAndPrint(PostDelivery service, Order order)
     {
         Receipt receipt = service.Deliver(order);
         decimal total = order.ItemsCost + receipt.DeliveryCost;

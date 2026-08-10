@@ -6,13 +6,13 @@ namespace SmartHouse;
 
 internal class HomeController
 {
-    public void ShowStatuses(IEnumerable<IStatusProvider> devices)
+    public void ShowStatuses(List<IStatusProvider> devices)
     {
         foreach (var device in devices)
             device.ShowStatus();
     }
 
-    public void RunDiagnostics(IEnumerable<ISelfTestable> devices)
+    public void RunDiagnostics(List<ISelfTestable> devices)
     {
         foreach (var device in devices)
         {
@@ -22,13 +22,13 @@ internal class HomeController
         }
     }
 
-    public void UpdateSoftware(IEnumerable<ISoftwareUpdatable> devices)
+    public void UpdateSoftware(List<ISoftwareUpdatable> devices)
     {
         foreach (var device in devices)
             device.UpdateSoftware();
     }
 
-    public void SendAlert(IEnumerable<INotificationSender> devices, string message)
+    public void SendAlert(List<INotificationSender> devices, string message)
     {
         foreach (var device in devices)
             device.SendNotification(message);

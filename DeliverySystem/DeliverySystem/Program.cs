@@ -7,15 +7,15 @@ internal class Program
         var orders = new List<Order>()
         {
             new Order(1, 25, 10, 2000),
-            new Order(2, 10, 15, 1000),
-            new Order(2, 200, 100, 5000),
+            //new Order(2, 10, 15, 1000),
+            //new Order(2, 200, 100, 5000),
         };
 
-        var services = new List<DeliverySevice>()
+        var services = new List<PostDelivery>()
         {
+            new PostDelivery(),
             new CourierDelivery(),
-            new ExpressDelivery(),
-            new PostDelivery()
+            new ExpressDelivery()
         };
  
         foreach (var order in orders)

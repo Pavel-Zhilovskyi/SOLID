@@ -18,7 +18,7 @@ internal class Program
 
         Console.WriteLine();
 
-        Console.WriteLine($"Выручка: {session.CalculateRevenue()} грн");
+        Console.WriteLine($"Выручка: {session.CalculateIncome()} грн");
 
         Console.WriteLine();
 
