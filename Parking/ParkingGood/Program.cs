@@ -2,32 +2,17 @@
 
 internal class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
-        var parking = new Parking();
+        var parking = new Parking(); 
 
-        var car = new Car("AA1111AA");
-        var secondCar = new Car("BB2222BB");
-        var electricCar = new ElectricCar("CC3333CC");
+        var regularCar = new Car("AP1234BB");
+        var electricCar = new ElectricCar("AT5678CE");
 
-        car.EnterParking(parking);
-        secondCar.EnterParking(parking);
-        electricCar.EnterParking(parking);
+        parking.ParkCar(regularCar);
 
         Console.WriteLine();
 
-        var reporter = new ParkingReporter();
-        reporter.Print(parking);
-
-        Console.WriteLine();
-
-        var fuelStation = new FuelStation();
-        fuelStation.Refuel(car);
-        fuelStation.Refuel(secondCar);
-
-        Console.WriteLine();
-
-        var chargingStation = new ChargingStation();
-        chargingStation.Charge(electricCar);
+        parking.ParkCar(electricCar);
     }
 }

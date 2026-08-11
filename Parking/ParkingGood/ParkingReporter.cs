@@ -6,9 +6,9 @@ internal class ParkingReporter
     {
         Console.WriteLine("Автомобили на парковке:");
 
-        foreach (var vehicle in parking.Vehicles)
+        foreach (var car in parking.Vehicles)
         {
-            Console.WriteLine(vehicle.Plate);
+            Console.WriteLine(car.LicensePlate);
         }
     }
 }

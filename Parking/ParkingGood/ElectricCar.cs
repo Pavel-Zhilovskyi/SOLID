@@ -1,13 +1,18 @@
 ﻿namespace ParkingGood;
 
-internal class ElectricCar : Vehicle, IChargeable
+internal class ElectricCar : Car
 {
-    public ElectricCar(string plate) : base(plate)
+    public ElectricCar(string licensePlate) : base(licensePlate)
     {
     }
 
-    public void Charge()
+    public override void Park()
     {
-        Console.WriteLine($"{Plate} заряжен.");
+        Console.WriteLine($"Электромобиль {LicensePlate} припаркован.");
+    }
+
+    public override ElectricParkingTicket CreateParkingTicket()
+    {
+        return new ElectricParkingTicket(LicensePlate, "Парковочный талон для электромобиля", true);
     }
 }

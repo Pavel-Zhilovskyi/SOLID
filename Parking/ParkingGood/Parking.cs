@@ -2,17 +2,18 @@
 
 internal class Parking
 {
-    private readonly List<Vehicle> vehicles = new();
+    private readonly List<Car> _vehicles = new();
 
-    public IReadOnlyList<Vehicle> Vehicles => vehicles;
+    public IReadOnlyList<Car> Vehicles => _vehicles;
 
-    public void AddVehicle(Vehicle vehicle)
+    public void ParkCar(Car car)
     {
-        vehicles.Add(vehicle);
-    }
+        car.Park();
+        _vehicles.Add(car);
 
-    public void RemoveVehicle(Vehicle vehicle)
-    {
-        vehicles.Remove(vehicle);
+        ParkingTicket ticket = car.CreateParkingTicket();
+
+        Console.WriteLine(
+            $"Создан талон для автомобиля {ticket.LicensePlate}: " + $"{ticket.Description}");
     }
 }

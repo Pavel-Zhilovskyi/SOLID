@@ -1,13 +1,21 @@
 ﻿namespace ParkingGood;
 
-internal class Car : Vehicle, IRefuelable
+internal class Car
 {
-    public Car(string plate) : base(plate)
+    public string LicensePlate { get; }
+
+    public Car(string licensePlate)
     {
+        LicensePlate = licensePlate;
     }
 
-    public void Refuel()
+    public virtual void Park()
     {
-        Console.WriteLine($"{Plate} заправлен бензином.");
+        Console.WriteLine($"Автомобиль {LicensePlate} припаркован.");
+    }
+
+    public virtual ParkingTicket CreateParkingTicket()
+    {
+        return new ParkingTicket(LicensePlate, "Обычный парковочный талон");
     }
 }
