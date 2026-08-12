@@ -5,7 +5,8 @@ internal class HazardousMaterialExperiment : Experiment
     private readonly IChemicalAnalyzer _chemicalAnalyzer;
     private readonly IRadiationAnalyzer _radiationAnalyzer;
 
-    public HazardousMaterialExperiment(Sample sample, IChemicalAnalyzer analyzer, IRadiationAnalyzer radiationAnalyzer  ) : base(sample)
+    public HazardousMaterialExperiment(Sample sample, IChemicalAnalyzer analyzer, IRadiationAnalyzer radiationAnalyzer) 
+        : base(sample)
     {
         _chemicalAnalyzer = analyzer;
         _radiationAnalyzer = radiationAnalyzer;

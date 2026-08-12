@@ -1,14 +1,21 @@
-﻿namespace ChessTournamentManager;
+﻿using ChessTournamentManager;
 
 internal class TournamentManager
 {
-    public void AddPlayer(Tournament tournament,  Player player)
+    private readonly Tournament _tournament;
+
+    public TournamentManager(Tournament tournament)
     {
-        tournament.Players.Add(player);
+        _tournament = tournament;
     }
 
-    public void AddMatch(Tournament tournament, Match match)
+    public void AddPlayer(Player player)
     {
-        tournament.Matches.Add(match);
+        _tournament.Players.Add(player);
+    }
+
+    public void AddMatch(Match match)
+    {
+        _tournament.Matches.Add(match);
     }
 }

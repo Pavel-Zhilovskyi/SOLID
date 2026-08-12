@@ -2,7 +2,7 @@
 
 internal class ResultPrinter
 {
-    public void Print(IEnumerable<Player> players)
+    public void Print(List<Player> players)
     {
         Console.WriteLine("Tournament results");
         Console.WriteLine("--------------------");

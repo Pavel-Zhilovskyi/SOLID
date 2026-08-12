@@ -1,6 +1,6 @@
 ﻿namespace ChemicalLab;
 
-internal abstract class Sample
+internal class Sample
 {
     public string Name { get; }
     public int Weight { get; }
@@ -8,7 +8,7 @@ internal abstract class Sample
     public int Radioactivity { get; }
     public int Toxicity { get; }
 
-    protected Sample(string name, int weight, int temperature, int radioactivity, int toxicity)
+    public Sample(string name, int weight, int temperature, int radioactivity, int toxicity)
     {
         Name = name;
         Weight = weight;
